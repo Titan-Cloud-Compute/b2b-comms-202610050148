@@ -37,8 +37,8 @@ function registerVendorMocks(client: MockApiClient): void {
   standalone: true,
   imports: [FormsModule],
   template: `
-    <div data-testid="vendor-profile-screen">
-      <h1>Vendor Profile</h1>
+    <div class="page" data-testid="vendor-profile-screen">
+      <header class="page-header"><h1>Vendor Profile</h1></header>
 
       <section>
         <h2>Company profile</h2>

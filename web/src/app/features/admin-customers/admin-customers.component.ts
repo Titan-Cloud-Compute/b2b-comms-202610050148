@@ -36,8 +36,8 @@ function registerCustomerInviteMocks(client: MockApiClient): void {
   standalone: true,
   imports: [FormsModule],
   template: `
-    <div data-testid="admin-customers-screen">
-      <h1>Customer Management</h1>
+    <div class="page" data-testid="admin-customers-screen">
+      <header class="page-header"><h1>Customer Management</h1></header>
 
       <section>
         <h2>Invite a customer</h2>

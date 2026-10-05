@@ -15,8 +15,8 @@ const PREFERENCES_PATH = '/api/notifications/preferences';
   standalone: true,
   imports: [FormsModule],
   template: `
-    <div data-testid="settings-notifications-screen">
-      <h1>Notification Settings</h1>
+    <div class="page" data-testid="settings-notifications-screen">
+      <header class="page-header"><h1>Notification Settings</h1></header>
       <form (ngSubmit)="save()">
         <label>
           <input

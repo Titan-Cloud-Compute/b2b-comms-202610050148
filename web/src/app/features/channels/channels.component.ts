@@ -39,8 +39,8 @@ function registerChannelMocks(client: MockApiClient): void {
   standalone: true,
   imports: [FormsModule],
   template: `
-    <div data-testid="channels-screen">
-      <h1>Channels</h1>
+    <div class="page" data-testid="channels-screen">
+      <header class="page-header"><h1>Channels</h1></header>
 
       <section data-testid="channel-outcomes">
         <p data-testid="channel-create-outcome">When a vendor creates a channel, {{ channelOutcome }}.</p>

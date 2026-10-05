@@ -6,6 +6,7 @@ import { SafeHtmlPipe } from '../safe-html.pipe';
 import { AuthApi } from '../api/auth-api.service';
 import { FIRM_NAV_ITEMS, ADMIN_NAV_ITEMS, SHARED_NAV_ITEMS, ADMIN_TAB_MAP } from './nav-items';
 import { SIDEBAR_TEMPLATE } from './sidebar.template';
+import { NAV_GROUPS } from './nav-groups';
 
 @Component({
   selector: 'app-sidebar',
@@ -382,6 +383,8 @@ export class SidebarComponent {
   openSettings = output<void>();
 
   readonly firmNavItems = FIRM_NAV_ITEMS;
+  /** Main / Vendor / Customer / Admin groups (Admin only for admin roles). */
+  readonly navGroups = NAV_GROUPS;
   readonly adminNavItems = ADMIN_NAV_ITEMS;
   // Rendered for every role (see SHARED_NAV_ITEMS) — outside the role branches.
   readonly sharedNavItems = SHARED_NAV_ITEMS;

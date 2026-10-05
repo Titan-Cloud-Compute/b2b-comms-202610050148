@@ -21,8 +21,8 @@ const CUSTOMER_OUTCOME = 'the response returns 200 with a downloadUrl pointing t
   standalone: true,
   imports: [FormsModule],
   template: `
-    <div data-testid="invoices-screen">
-      <h1>Invoices</h1>
+    <div class="page" data-testid="invoices-screen">
+      <header class="page-header"><h1>Invoices</h1></header>
 
       <section>
         <h2>Generate invoice</h2>

@@ -26,8 +26,8 @@ export const VENDOR_OUTCOME =
   standalone: true,
   imports: [FormsModule],
   template: `
-    <div data-testid="orders-screen">
-      <h1>Orders</h1>
+    <div class="page" data-testid="orders-screen">
+      <header class="page-header"><h1>Orders</h1></header>
 
       <section data-testid="order-scenarios">
         <h2>How ordering works</h2>

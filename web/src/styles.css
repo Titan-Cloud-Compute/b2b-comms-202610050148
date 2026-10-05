@@ -8,14 +8,7 @@
 :root {
   --imp-h: 0px;
 
-  /* Font-size scale */
-  --font-size-xs: 0.75rem;    /* 12px – smallest labels / tags */
-  --font-size-sm: 0.875rem;   /* 14px – secondary text, buttons */
-  --font-size-md: 0.9375rem;  /* 15px – comfortable body text */
-  --font-size-lg: 1.125rem;   /* 18px – section headings */
-  --font-size-xl: 1.5rem;     /* 24px – page headings */
-  --font-size-2xl: 2rem;      /* 32px – hero headings */
-  --font-size-input: 16px;    /* iOS-zoom-safe input size */
+  /* Font-size scale lives in styles/tokens.css. */
 
   /* Radius tokens not covered by tokens.css */
   --radius-xs: 4px;
@@ -265,4 +258,210 @@ body:has(app-intake .chat-window) app-root > app-intake > .intake-page {
 
 body:has(app-intake .chat-window) app-root > app-support-footer {
   flex: 0 0 auto;
+}
+
+/* ── Shared page primitives (styling card) ────────────────────────────────
+ * Used by every features/* page: <div class="page"> + <header class="page-header">.
+ * Tokens only — colour, type and spacing come from styles/tokens.css.        */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-6) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  font-family: var(--font-body);
+  font-size: var(--font-size-md);
+  color: var(--color-text-primary);
+  min-width: 0;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.page h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.page h2,
+.page h3 {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.page p {
+  margin: 0 0 var(--space-3);
+  color: var(--color-text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.page section,
+.page > form {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-5);
+  min-width: 0;
+}
+
+.page form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-4);
+  align-items: end;
+  margin: 0 0 var(--space-3);
+}
+
+.page fieldset {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-3);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  margin: 0;
+  min-width: 0;
+}
+
+.page legend {
+  padding: 0 var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.page label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  min-width: 0;
+}
+
+.page label:has(> input[type="checkbox"]),
+.page label:has(> input[type="radio"]) {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.page input:not([type="checkbox"]):not([type="radio"]),
+.page select,
+.page textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: var(--font-size-input);
+  color: var(--color-text-primary);
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-btn);
+  padding: var(--space-2) var(--space-3);
+}
+
+.page input:focus,
+.page select:focus,
+.page textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-focus);
+}
+
+.page button {
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-on-primary);
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-btn);
+  padding: var(--space-2) var(--space-4);
+  cursor: pointer;
+  justify-self: start;
+}
+
+.page button:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.page button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.page form > p,
+.page form > ul,
+.page form > div {
+  grid-column: 1 / -1;
+}
+
+.page ul {
+  margin: 0;
+  padding-left: var(--space-5);
+}
+
+.page table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+  display: block;
+  overflow-x: auto;
+}
+
+.page th,
+.page td {
+  text-align: left;
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.page th {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-secondary);
+}
+
+.page code,
+.page pre {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.page [role="alert"] {
+  color: var(--color-error);
+}
+
+/* Mobile: single-column fallback (matches --breakpoint-md). */
+@media (max-width: 768px) {
+  .page {
+    padding: var(--space-4) var(--space-3) var(--space-6);
+    gap: var(--space-4);
+  }
+
+  .page section,
+  .page > form {
+    padding: var(--space-4);
+  }
+
+  .page form,
+  .page fieldset {
+    grid-template-columns: 1fr;
+  }
 }

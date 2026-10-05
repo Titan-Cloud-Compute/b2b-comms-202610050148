@@ -16,8 +16,8 @@ const AUDIT_LOG_PATH = 'api/admin/audit-log';
   standalone: true,
   imports: [FormsModule],
   template: `
-    <div data-testid="admin-audit-log-screen">
-      <h1>Audit Log</h1>
+    <div class="page" data-testid="admin-audit-log-screen">
+      <header class="page-header"><h1>Audit Log</h1></header>
 
       <section>
         <h2>Audit entries</h2>
