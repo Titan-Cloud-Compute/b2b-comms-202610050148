@@ -280,6 +280,7 @@ import { NavItem, FIRM_NAV_ITEMS, ADMIN_NAV_ITEMS, SHARED_NAV_ITEMS, ADMIN_TAB_M
     /* Mobile Bottom Nav */
     .mobile-bottom-nav {
       display: none;
+      overflow: hidden;
       position: fixed;
       bottom: 0;
       left: 0;
@@ -294,6 +295,10 @@ import { NavItem, FIRM_NAV_ITEMS, ADMIN_NAV_ITEMS, SHARED_NAV_ITEMS, ADMIN_TAB_M
 
     .bottom-nav-item {
       flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-align: center;
+      overflow-wrap: anywhere;
       display: flex;
       flex-direction: column;
       align-items: center;
