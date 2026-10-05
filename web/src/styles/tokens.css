@@ -136,6 +136,24 @@
   --chat-composer-bg: var(--color-bg-secondary);
 }
 
+/* ---- Overlay + glass + on-dark tokens (styling card 2026-10-05) ---- */
+:root {
+  /* Modal / drawer backdrop overlays */
+  --color-overlay:      rgba(14, 23, 38, 0.5);
+  --color-overlay-soft: rgba(14, 23, 38, 0.4);
+  --color-overlay-md:   rgba(14, 23, 38, 0.45);
+  --color-overlay-dark: rgba(14, 23, 38, 0.6);
+
+  /* Semi-transparent text rendered on a dark / primary-coloured surface */
+  --color-on-dark-primary:   rgba(255, 255, 255, 0.85);
+  --color-on-dark-secondary: rgba(255, 255, 255, 0.70);
+
+  /* Glass card surfaces (hero / about sections with dark backdrops) */
+  --color-glass-bg:        rgba(255, 255, 255, 0.14);
+  --color-glass-border:    rgba(255, 255, 255, 0.28);
+  --color-glass-border-md: rgba(255, 255, 255, 0.40);
+}
+
 /* ---- Type scale, spacing, mono font + breakpoints (styling card 2026-10-05) ---- */
 :root {
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;

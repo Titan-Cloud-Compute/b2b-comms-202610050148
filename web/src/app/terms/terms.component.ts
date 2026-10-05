@@ -131,7 +131,7 @@ import { RouterLink } from '@angular/router';
       display: flex;
       flex-direction: column;
       background: var(--color-neutral-50);
-      font-family: system-ui, -apple-system, sans-serif;
+      font-family: var(--font-body);
     }
     .page-header {
       background: var(--color-primary);
@@ -150,7 +150,7 @@ import { RouterLink } from '@angular/router';
       display: flex;
       align-items: center;
       gap: 0.375rem;
-      color: rgba(255,255,255,0.85);
+      color: var(--color-on-dark-primary);
       text-decoration: none;
       font-size: var(--font-size-sm);
       transition: color 0.15s;
@@ -160,7 +160,7 @@ import { RouterLink } from '@angular/router';
       font-size: var(--font-size-xs);
       font-weight: 500;
       letter-spacing: 0.06em;
-      color: rgba(255,255,255,0.7);
+      color: var(--color-on-dark-secondary);
       flex: 1;
       text-align: center;
     }

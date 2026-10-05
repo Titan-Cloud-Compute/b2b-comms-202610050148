@@ -244,7 +244,7 @@ input[type="url"]::-moz-selection {
 }
 
 .token-input {
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-family: var(--font-mono);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   /* Fires `animationstart` as soon as the field is rendered, which the template

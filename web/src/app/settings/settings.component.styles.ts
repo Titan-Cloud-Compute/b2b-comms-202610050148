@@ -80,7 +80,7 @@ export const settingsComponentStyles = `
     .toggle-row:last-child { border-bottom: none; }
     .toggle-row input { width: 20px; height: 20px; }
     .modal-overlay {
-      position: fixed; inset: 0; background: rgba(14, 23, 38, 0.6);
+      position: fixed; inset: 0; background: var(--color-overlay-dark);
       display: flex; align-items: center; justify-content: center; z-index: 1000;
       padding: 1rem;
     }
@@ -100,7 +100,7 @@ export const settingsComponentStyles = `
       border-radius: var(--radius-sm); color: var(--color-text-primary); font-size: var(--font-size-input);
     }
     .masked-key {
-      font-family: 'SF Mono','Monaco','Inconsolata','Fira Code',monospace;
+      font-family: var(--font-mono);
       padding: 0.5rem 0.75rem; background: var(--color-bg-secondary);
       border: 1px solid var(--color-border); border-radius: var(--radius-sm);
       color: var(--color-text-primary); word-break: break-all;
