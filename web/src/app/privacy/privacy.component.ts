@@ -104,21 +104,21 @@ import { RouterLink } from '@angular/router';
   styles: [`
     .static-page {
       min-height: 100vh; display: flex; flex-direction: column;
-      background: var(--color-neutral-50); font-family: system-ui, -apple-system, sans-serif;
+      background: var(--color-neutral-50); font-family: var(--font-body);
     }
-    .page-header { background: var(--color-primary); color: white; padding: 0 2rem; }
+    .page-header { background: var(--color-primary); color: var(--color-on-primary); padding: 0 2rem; }
     .header-inner {
       max-width: 800px; margin: 0 auto; height: 56px;
       display: flex; align-items: center; gap: 1rem;
     }
     .back-link {
       display: flex; align-items: center; gap: 0.375rem;
-      color: rgba(255,255,255,0.85); text-decoration: none; font-size: var(--font-size-sm);
+      color: var(--color-on-primary-alpha-85); text-decoration: none; font-size: var(--font-size-sm);
     }
-    .back-link:hover { color: white; }
+    .back-link:hover { color: var(--color-on-primary); }
     .org-label {
       font-size: var(--font-size-xs); font-weight: 500; letter-spacing: 0.06em;
-      color: rgba(255,255,255,0.7); flex: 1; text-align: center;
+      color: var(--color-on-primary-alpha-70); flex: 1; text-align: center;
     }
     .page-main { flex: 1; padding: 2.5rem 1.5rem; }
     .content-card {
